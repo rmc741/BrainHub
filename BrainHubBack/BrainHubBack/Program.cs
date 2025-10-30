@@ -1,4 +1,9 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using BrainHubBack.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<BrainHubBackContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("BrainHubBackContext") ?? throw new InvalidOperationException("Connection string 'BrainHubBackContext' not found.")));
 
 // Add services to the container.
 
