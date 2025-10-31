@@ -30,7 +30,7 @@ namespace BrainHubBack.Controllers
 
         // GET: api/Artigo/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Artigo>> GetArtigo(int id)
+        public async Task<ActionResult<ArtigoDto>> GetArtigo(int id)
         {
             var artigo = await _context.Artigo.FindAsync(id);
 
@@ -39,7 +39,9 @@ namespace BrainHubBack.Controllers
                 return NotFound();
             }
 
-            return artigo;
+            var artigoDto = new ArtigoDto(artigo);
+
+            return artigoDto;
         }
 
         // PUT: api/Artigo/5

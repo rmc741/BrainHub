@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BrainHubBack")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+354a5100bffe863d9d6a7ad11511a4e862d1a779")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ac7aba5c10c81c639eeedb6707416cb9ca4a1bf8")]
 [assembly: System.Reflection.AssemblyProductAttribute("BrainHubBack")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BrainHubBack")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
