@@ -23,9 +23,18 @@ namespace BrainHubBack.Controllers
 
         // GET: api/Artigo
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Artigo>>> GetArtigo()
+        public async Task<ActionResult<IEnumerable<ArtigoDto>>> GetArtigo()
         {
-            return await _context.Artigo.ToListAsync();
+            var artigoList = await _context.Artigo.ToListAsync();
+            var artigoDtoList = new List<ArtigoDto>();
+
+            foreach (var artigo in artigoList)
+            {
+                var artigoDto = new ArtigoDto(artigo);
+                artigoDtoList.Add(artigoDto);
+            }
+
+            return artigoDtoList;
         }
 
         // GET: api/Artigo/5
@@ -78,8 +87,10 @@ namespace BrainHubBack.Controllers
         // POST: api/Artigo
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Artigo>> PostArtigo(Artigo artigo)
+        public async Task<ActionResult<ArtigoDto>> PostArtigo(CreateArtigoDto artigoDto)
         {
+            var artigo = new Artigo(artigoDto);
+
             _context.Artigo.Add(artigo);
             await _context.SaveChangesAsync();
 
