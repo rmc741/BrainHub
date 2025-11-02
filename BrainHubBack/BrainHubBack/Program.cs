@@ -7,12 +7,25 @@ builder.Services.AddDbContext<BrainHubBackContext>(options =>
 
 // Add services to the container.
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy
+            .AllowAnyOrigin()    // permite qualquer origem
+            .AllowAnyMethod()    // permite qualquer método (GET, POST, PUT, DELETE, etc.)
+            .AllowAnyHeader();   // permite qualquer cabeçalho
+    });
+});
+
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+app.UseCors("AllowAll");
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
