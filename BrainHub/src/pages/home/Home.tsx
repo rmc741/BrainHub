@@ -17,8 +17,13 @@ export function Home() {
 
     return (
         <div>
-            Home Page
-            <h1>Lista de Artigos</h1>
+            <h1>Bem-vindo ao BarinHub!</h1>
+            <p>
+                Um espaço criado para unir pessoas, compartilhar conhecimentos e transformar ideias em inovação.
+                Aqui, cada insight conta — e juntos, construímos um hub de aprendizado colaborativo.
+            </p>
+
+            <h3>Lista de Artigos</h3>
             <ArtigoList artigos={artigos} />
         </div>
     )
