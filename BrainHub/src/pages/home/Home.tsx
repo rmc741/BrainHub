@@ -23,6 +23,8 @@ export function Home() {
                 Aqui, cada insight conta — e juntos, construímos um hub de aprendizado colaborativo.
             </p>
 
+            Verificar a centralização
+
             <h3>Lista de Artigos</h3>
             <ArtigoList artigos={artigos} />
         </div>
