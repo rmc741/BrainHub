@@ -18,8 +18,6 @@ export function Home() {
     return (
         <div>
             Home Page
-
-
             <h1>Lista de Artigos</h1>
             <ArtigoList artigos={artigos} />
         </div>
