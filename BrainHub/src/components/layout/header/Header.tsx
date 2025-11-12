@@ -7,7 +7,7 @@ export function Header() {
         <AppBar sx={{display:"flex"}}>
             <Toolbar sx={{justifyContent:"space-between"}}>
                 <a className="logo" href="/">
-                    <img src="teste.svg" style={{height:"50px"}} alt="Logo"/>
+                    <img src="criatividade.png" style={{height:"40px"}} alt="Logo"/>
                     <Typography>
                         BarinHub
                     </Typography>
