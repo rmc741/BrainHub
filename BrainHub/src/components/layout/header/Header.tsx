@@ -4,7 +4,7 @@ import "./index.css";
 
 export function Header() {
     return(
-        <AppBar sx={{display:"flex"}}>
+        <AppBar position="static" sx={{display:"flex"}}>
             <Toolbar sx={{justifyContent:"space-between"}}>
                 <a className="logo" href="/">
                     <img src="criatividade.png" style={{height:"40px"}} alt="Logo"/>
