@@ -3,4 +3,5 @@ export interface Artigo {
   titulo: string;
   tag: string;
   conteudo: string;
+  dataCriacao: Date;
 }

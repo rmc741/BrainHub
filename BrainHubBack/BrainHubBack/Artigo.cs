@@ -20,5 +20,7 @@
         public string? Tag { get; set; }
 
         public string? Conteudo { get; set; }
+
+        public DateTime DataCriacao { get; set; } = DateTime.UtcNow;
     }
 }
