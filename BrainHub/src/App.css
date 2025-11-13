@@ -1,0 +1,9 @@
+.App {
+  min-height: 100vh;      /* ocupa toda a altura da tela */
+  display: flex;
+  flex-direction: column; /* organiza itens verticalmente */
+}
+
+.App > *:last-child {
+  margin-top: auto;       /* empurra o footer para o final */
+}

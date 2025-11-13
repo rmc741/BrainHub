@@ -6,7 +6,7 @@ import AppRouteConfig from "./config/RouteConfig";
 function App() {
 
   return (
-    <div style={{ padding: "20px" }}>
+    <div className="App">
       <Header/>
       <AppRouteConfig />
       <Footer/>
