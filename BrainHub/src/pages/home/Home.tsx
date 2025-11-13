@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import type { Artigo } from "../../types/Artigo";
-import { ArtigoList } from "../../components/ArtigoList";
+import { ArtigoList } from "../../components/artigoList/ArtigoList";
 
 export function Home() {
     const [artigos, setArtigos] = useState<Artigo[]>([]);

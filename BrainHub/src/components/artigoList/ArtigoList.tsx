@@ -1,5 +1,5 @@
 import { Card, CardContent, Typography, Grid } from "@mui/material";
-import type { Artigo } from "../types/Artigo";
+import type { Artigo } from "../../types/Artigo";
 
 interface ArtigoListProps {
   artigos: Artigo[];
