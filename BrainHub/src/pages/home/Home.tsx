@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import type { Artigo } from "../../types/Artigo";
 import { ArtigoList } from "../../components/artigoList/ArtigoList";
+import "./index.css";
 
 export function Home() {
     const [artigos, setArtigos] = useState<Artigo[]>([]);
@@ -16,16 +17,8 @@ export function Home() {
     }, []);
 
     return (
-        <div>
-            <h1>Bem-vindo ao BarinHub!</h1>
-            <p>
-                Um espaço criado para unir pessoas, compartilhar conhecimentos e transformar ideias em inovação.
-                Aqui, cada insight conta — e juntos, construímos um hub de aprendizado colaborativo.
-            </p>
-
-            Verificar a centralização
-
-            <h3>Lista de Artigos</h3>
+        <div className="main-home">
+            <h1>Lista de Artigos</h1>
             <ArtigoList artigos={artigos} />
         </div>
     )
