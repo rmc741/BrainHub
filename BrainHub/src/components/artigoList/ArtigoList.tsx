@@ -1,11 +1,14 @@
 import { Card, CardContent, Typography, Grid } from "@mui/material";
 import type { Artigo } from "../../types/Artigo";
+import { useNavigate } from "react-router-dom";
 
 interface ArtigoListProps {
   artigos: Artigo[];
 }
 
 export function ArtigoList({ artigos }: ArtigoListProps) {
+  const navigate = useNavigate();
+
   return (
     <Grid
       container
@@ -21,6 +24,7 @@ export function ArtigoList({ artigos }: ArtigoListProps) {
         return (
           <Grid key={artigo.id}>
             <Card
+            onClick={() => navigate(`/artigo/${artigo.id}`)}
               sx={{
                 height: "100%",
                 borderRadius: 3,
