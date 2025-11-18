@@ -45,18 +45,18 @@ export function ArtigoDetalhe() {
   const dataFormatada = new Date(artigo.dataCriacao).toLocaleDateString("pt-BR");
 
   return (
-    <div style={{ padding: "20px", maxWidth: "800px", margin: "0 auto" }}>
+    <div>
       <h1>{artigo.titulo}</h1>
 
-      <p style={{ fontStyle: "italic", color: "#666" }}>{artigo.tag}</p>
+      <p>{artigo.tag}</p>
 
-      <p style={{ fontSize: "14px", color: "#888" }}>
+      <p>
         Criado em: {dataFormatada}
       </p>
 
-      <hr style={{ margin: "20px 0" }} />
+      <hr/>
 
-      <p style={{ fontSize: "18px", lineHeight: "1.6" }}>
+      <p>
         {artigo.conteudo}
       </p>
     </div>
